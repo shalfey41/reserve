@@ -1,0 +1,19 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "juice": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inline-css": "^3.1.0",
+    "juice": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ru"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="ru"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 ie8 gt-ie7" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js gt-ie8 gt-ie7" lang="ru">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Барбершоп Магеллан | Коррекция бровей</title>
+    <meta name="application-name" content="Барбершоп Магеллан" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="cleartype" content="on" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="img/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/touch-icon-ipad-retina.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Барбершоп Магеллан" />
+    <meta property="og:description" content="Угощайтесь кофе или работайте за ноутбуком, пока стрижёт мастер — ваш стиль не пострадает." />
+    <meta property="og:image" content="http://magellanbarber.ru/img/logo-black.png" />
+    <meta property="og:url" content="http://magellanbarber.ru" />
+    <meta property="og:site_name" content="Барбершоп Магеллан" />
+    <meta property="og:see_also" content="http://magellanbarber.ru" />
+    <!--    <link href="css/style.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function(d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter36074950 = new Ya.Metrika({
+                    id: 36074950,
+                    webvisor: true,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
+                });
+            } catch (e) {}
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function() {
+                n.parentNode.insertBefore(s, n);
+            };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");
+    </script>
+</head>
+
+<body>
+    <style>
+    .son_wrapper {
+        width: 150px;
+        height: 150px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        border: 0px solid #FF9406;
+        z-index: 9999;
+    }
+    
+    .son_wrapper a {
+        text-decoration: none;
+    }
+    
+    .son_circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 250px;
+        font-size: 14px;
+        font-family: Play, sans-serif !important;
+        color: #fff;
+        line-height: 25px;
+        text-align: center;
+        background: #FF9406;
+    }
+    
+    @keyframes son_outercircle {
+        0% {
+            transform: scale(1, 1) opacity: 1;
+        }
+        80% {
+            opacity: 0.8;
+        }
+        100% {
+            transform: scale(2, 2);
+            opacity: 0;
+        }
+    }
+    
+    .son_outercircle {
+        z-index: -1000;
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border: 5px solid #FF9406;
+        border-radius: 50%;
+        animation: son_outercircle 2s infinite linear;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    </style>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById("son_close").onclick = function() {
+            document.getElementById("son_overlay").style.visibility = "none";
+        };
+        document.getElementById("son_overlay").onclick = function() {
+            document.getElementById("son_overlay").style.display = "none";
+        };
+    });
+    </script>
+    <style>
+    .son_frame {
+        background: #fofofo;
+        color: white;
+        width: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        resize: both;
+        overflow: hidden;
+        width: 1027px;
+        height: 706px;
+    }
+    
+    .son_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.5);
+        /*dim the background*/
+        display: none;
+    }
+    
+    .son_frame iframe {
+        background: #fofofo;
+    }
+    
+    #son_close {
+        position: absolute;
+        top: 31px;
+        right: 25px;
+        width: 18px;
+        height: 18px;
+        border: 0px solid red;
+        cursor: pointer;
+        display: block;
+    }
+    </style>
+    <div class="son_wrapper">
+        <div class="son_outercircle"></div>
+        <a href="#" onClick="showSonlineWidget(sonlineWidgetOptions);">
+            <div class="son_circle">
+                <br>Онлайн
+                <br/> запись</div>
+        </a>
+    </div>
+    <!--<div class="son_overlay" id="son_overlay"> <div class="son_frame" width="1027"> <div id="son_close"> </div> <iframe width="1027" height="706" frameborder="0" scrolling="no" src="https://widget3.sonline.su/ru/services/?placeid=5795"></iframe> </div> </div> -->
+    <!--[if lt IE 9]>
+        <p class="browserupgrade">Вы используете <strong>старую версию</strong> браузера. Пожалуйста, <a href="http://browsehappy.com/">обновите браузер</a> чтобы просматривать сайт.</p>
+    <![endif]-->
+    <section class="promo promo--no-height">
+        <div class="container">
+            <div class="row">
+                <!-- header -->
+                <header class="header">
+                    <div class="col-xs-6 col-sm-3 col-lg-2 logo">
+                        <a href="index.html"><img src="img/logo-white.png" alt="Магеллан" width="158" height="84"></a>
+                    </div>
+                    <p class="col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-3 col-lg-3 col-lg-offset-5 header-adress">
+                        ул. Парадная 3, корпус 2,
+                        <br>ЖК «Парадный квартал»
+                    </p>
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 header-right">
+                        <a href="tel:+78129861060"><span class="header-phone">+7 (812) 986-10-60</span></a>
+                        <br>
+                        <a href="#" class="header-recall" data-toggle="modal" data-target="#modal-recall">Перезвоните мне</a>
+                    </div>
+                </header>
+            </div>
+            <!-- topnav -->
+            <nav>
+                <ul class="topnav">
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a class="dropdown active" href="services.html">Услуги<i class="icon-down-open"></i></a>
+                        <ul class="submenu">
+                            <li><a href="haircut.html">Стрижка</a></li>
+                            <li><a href="childrenhaircut.html">Детская стрижка</a></li>
+                            <li><a href="shavinghead.html">Бритье головы</a></li>
+                            <li><a href="washing.html">Мытье и укладка</a></li>
+                            <li><a href="camouflage.html">Камуфляж седины</a></li>
+                            <li><a href="care.html">Уход за волосами</a></li>
+                            <li><a href="mustache.html">Cтрижка усов</a></li>
+                            <li><a href="shavingface.html">Бритье</a></li>
+                            <li><a href="stylebeard.html">Стайлинг бороды</a></li>
+                            <li><a href="newstyle.html">Смена стиля</a></li>
+                            <li><a class="active" href="eyebrows.html">Коррекция бровей</a></li>
+                            <li><a href="premium.html">Премиум услуги</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="entry.html">Запись</a></li>
+                    <li><a href="interior.html">Интерьер</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li class="icon">
+                        <a href="#">&#9776;</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- promo -->
+            <div class="col-xs-12 promo-wrapper promo-wrapper--no-padding">
+                <h1 class="promo-header">Барбершоп Магеллан</h1>
+                <p class="section-text promo-text">Мы стрижём мужчин, которым важно время и качество услуг. Угощайтесь кофе или работайте за ноутбуком, пока стрижёт мастер — ваш стиль не пострадает.</p>
+                <!--<p class="special-offer">
+            <span class="special-offer__title">Акция</span>
+              В будние дни до 15:00 скидка 15% на все услуги!
+            <span class="special-offer__caption">Срок действия акции ограничен</span>
+            <a id="js-scroll-btn" href="#order" class="section-btn special-offer__btn">Записаться</a>
+            <span class="special-offer__promocod">Для получения скидки<br>назовите промокод «Сайт»</span>
+          </p>-->
+            </div>
+        </div>
+    </section>
+    <section class="section-wrapper service" id="service">
+        <div class="container">
+            <div class="row">
+                <h2 class="section-title">Коррекция бровей — 300 &#8381;</h2>
+                <p class="section-text section-subtitle">
+                    Мы не спрашиваем о косых и прямых висках. Воплощаем ваши задумки, либо стрижём так, как видим мы.
+                </p>
+                <ul id="js-service-sort" class="service-sort" role="tablist">
+                    <li href="#hair" role="presentation" class="col-xs-4 service-sort-item service-sort-hair active" aria-controls="hair" data-toggle="tab">Парикмахерские услуги</li>
+                    <li role="presentation" href="#body" class="col-xs-4 service-sort-item service-sort-body" aria-controls="body" data-toggle="tab">Удаление волос</li>
+                    <li role="presentation" href="#vip" class="col-xs-4 service-sort-item service-sort-vip" aria-controls="body" data-toggle="tab">Премиум услуги</li>
+                </ul>
+                <div class="tab-content" id="js-tab-content">
+                    <div id="hair" class="tab-pane fade in active">
+                        <div class="col-xs-12 col-sm-9 service-table">
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Стрижка традиционная</div>
+                                <div class="col-xs-3">~ 40 минут</div>
+                                <div class="col-xs-2">1200 &#8381;</div>
+                            </div>
+                            <div class="service-table-tr service-description-item" role="button" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                <div class="col-xs-7"><span>Стрижка «поддержание стиля»</span></div>
+                                <div class="col-xs-3">~ 20 минут</div>
+                                <div class="col-xs-2">600 &#8381;</div>
+                            </div>
+                            <div id="collapse2" class="collapse">
+                                <div class="service-description">
+                                    <p>
+                                        Оформление Вашей стрижки.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Детская стрижка</div>
+                                <div class="col-xs-3">~ 40 минут</div>
+                                <div class="col-xs-2">700 &#8381;</div>
+                            </div>
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Бритьё головы</div>
+                                <div class="col-xs-3">~ 40 минут</div>
+                                <div class="col-xs-2">1200 &#8381;</div>
+                            </div>
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Мытьё и укладка волос</div>
+                                <div class="col-xs-3">~ 20 минут</div>
+                                <div class="col-xs-2">600 &#8381;</div>
+                            </div>
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Камуфляж седины</div>
+                                <div class="col-xs-3">~ 25 минут</div>
+                                <div class="col-xs-2">1100 &#8381;</div>
+                            </div>
+                            <div class="service-table-tr service-description-item" role="button" data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                <div class="col-xs-7"><span>Уход за волосами и кожей головы</span></div>
+                                <div class="col-xs-3">~ 40 минут</div>
+                                <div class="col-xs-2">1500 &#8381;</div>
+                            </div>
+                            <div id="collapse1" class="collapse">
+                                <div class="service-description">
+                                    <p>
+                                        Ароматерапия, тонизирующий массаж головы, <span class="capitale">СПА</span>&nbsp;уход, за волосами и кожей головы. Косметика подбирается с учетом типа волос.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Стрижка усов</div>
+                                <div class="col-xs-3">~ 20 минут</div>
+                                <div class="col-xs-2">500 &#8381;</div>
+                            </div>
+                            <div class="service-table-tr service-description-item" role="button" data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                <div class="col-xs-7"><span>Королевское бритье</span></div>
+                                <div class="col-xs-3">~ 50 минут</div>
+                                <div class="col-xs-2">1200 &#8381;</div>
+                            </div>
+                            <div id="collapse3" class="collapse">
+                                <div class="service-description">
+                                    <p>
+                                        Распариваем щетину горячим полотенцем, наносим крем для лица помазком из натуральной шерсти. После бритья наносим маску, которая восстанавливает кожу и снимает раздражение. В заключение лёгкий массаж лица с применением бальзама для кожи.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="service-table-tr service-description-item" role="button" data-toggle="collapse" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                <div class="col-xs-7"><span>Стайлинг бороды</span></div>
+                                <div class="col-xs-3">~ 25 минут</div>
+                                <div class="col-xs-2">500 &#8381;</div>
+                            </div>
+                            <div id="collapse4" class="collapse">
+                                <div class="service-description">
+                                    <p>
+                                        Придание формы бороды, выравнивание контура.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Стрижка традиционная + королевское бритье</div>
+                                <div class="col-xs-3">~ 90 минут</div>
+                                <div class="col-xs-2">1900 &#8381;</div>
+                            </div>
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Стрижка традиционная + стайлинг бороды</div>
+                                <div class="col-xs-3">~ 60 минут</div>
+                                <div class="col-xs-2">1500 &#8381;</div>
+                            </div>
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Стрижка традиционная + стайлинг бороды + <span class="capitale">СПА</span>&nbsp;уход.</div>
+                                <div class="col-xs-3">~ 90 минут</div>
+                                <div class="col-xs-2">2100 &#8381;</div>
+                            </div>
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Смена стиля «Мастер решит за вас»</div>
+                                <div class="col-xs-3">~ 90 минут</div>
+                                <div class="col-xs-2">1700 &#8381;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="body" class="tab-pane fade">
+                        <div class="col-xs-12 col-sm-9 service-table">
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Бритье рук</div>
+                                <div class="col-xs-3">~ 30 минут</div>
+                                <div class="col-xs-2">1200 &#8381;</div>
+                            </div>
+                            <div class="service-table-tr">
+                                <div class="col-xs-7">Коррекция бровей</div>
+                                <div class="col-xs-3">~ 10 минут</div>
+                                <div class="col-xs-2">300 &#8381;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="vip" class="tab-pane fade">
+                        <div class="col-xs-12 col-sm-9 service-table">
+                            <div class="service-table-tr service-description-item" role="button" data-toggle="collapse" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                <div class="col-xs-10"><span>«Семь футов под килем», жених!</span></div>
+                                <div class="col-xs-2">7500 &#8381;</div>
+                            </div>
+                            <div id="collapse5" class="collapse">
+                                <div class="service-description">
+                                    <p>
+                                        Подготовка жениха и шафера комплексом <span class="capitale">СПА</span>&nbsp;услуг, стрижки и бритья. Пока мы стрижём, салон закрывается на 2 часа.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="service-table-tr service-description-item" role="button" data-toggle="collapse" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                <div class="col-xs-10"><span>«В дальний путь»</span></div>
+                                <div class="col-xs-2">5000 &#8381;</div>
+                            </div>
+                            <div id="collapse6" class="collapse">
+                                <div class="service-description">
+                                    <p>
+                                        Привезём вас до барбершопа на машине бизнес-класса. Выполним королевское бритье, стрижку и СПА-уход. Пожелаем вам попутного ветра и отправим в аэропорт/вокзал.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="service-table-tr service-description-item" role="button" data-toggle="collapse" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                <div class="col-xs-12"><span>«Офицерский состав»</span></div>
+                            </div>
+                            <div id="collapse7" class="collapse">
+                                <div class="service-description">
+                                    <p>
+                                        Заточка и обработка антисептиком вашей личной опасной бритвы в персональной ячейке барбершопа с именным ключом:
+                                    </p>
+                                    <div class="col-xs-12 service-description serv-dsec-ul">
+                                        <div class="col-xs-6">
+                                            <div class="col-xs-12">
+                                                «Капитан»
+                                                <ul>
+                                                    <li>Персональный уход за вашей опасной бритвой,</li>
+                                                    <li>Месяц бесплатных услуг барбершопа,</li>
+                                                    <li>Скидка 50% на услуги после.</li>
+                                                    <li class="service-description-price">Стоимость 65000 &#8381; в год</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="col-xs-12">
+                                                «Адмирал»
+                                                <ul>
+                                                    <li>Персональный уход за вашей опасной бритвой,</li>
+                                                    <li>Год бесплатных услуг барбершопа,</li>
+                                                    <li>Косметические средства за кожей и волосами на год.</li>
+                                                    <li class="service-description-price">Стоимость 85000 &#8381; в год</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 service-fact">
+                    <span class="factoid">Принимаем оплату банковскими картами и наличными.</span>
+                    <span class="factoid">
+              Приобретайте подарочные сертификаты на услуги и косметику на 3000, 6000 и 10000 рублей. Заказывайте по телефону +7 (812) 986-10-60
+            </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="col-xs-12 col-sm-4">
+        <div class="contact-item">
+            <h3 class="contact-item-title contact-item-phone">Телефон</h3>
+            <a href="tel:+78129861060">
+                <p class="section-text contact-item-text">+7 (812) 986-10-60</p>
+            </a>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- order -->
+    <section class="section-wrapper order">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="section-title">Запись по телефону</h2>
+                    <p class="section-text section-subtitle">Мы перезвоним в течение 5 минут, чтобы уточнить время записи и выбор мастера</p>
+                </div>
+                <form action="ok.php" method="post" class="col-xs-12 form-send order-form">
+                    <div class="col-xs-12 col-sm-6 form-phone">
+                        <input type="tel" name="phone" placeholder="Введите ваш телефон" required>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 form-submit">
+                        <button type="submit" class="section-btn">Позвоните мне</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 logo"><img src="img/logo-black.png" alt="Магеллан" width="158" height="84"></div>
+                <div class="col-xs-12 col-sm-6 footer-right">
+                    <a href="tel:+78129861060"><span class="footer-phone">+7 (812) 986-10-60</span></a>
+                    <a href="#" class="footer-recall" data-toggle="modal" data-target="#modal-recall">Перезвоните мне</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 footer-left">
+                    <p class="footer-text"><a href="#" class="footer-recall" data-toggle="modal" data-target="#modal-polytic">Политика конфиденциальности</a></p>
+                </div>
+                <div class="col-xs-12 col-sm-6 footer-right">
+                    <p class="footer-text">Разработка сайта — <a class="footer-recall" href="http://www.bezugly.ru" target="_blank">Bezugly</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal-recall -->
+    <div class="modal fade" id="modal-recall" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Оставьте заявку</h4>
+                    <p>Мы перезвоним в течение 5 минут</p>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form action="ok.php" method="post" class="col-xs-12 form-send modal-form">
+                            <div class="col-xs-12 form-phone">
+                                <input type="tel" name="phone" placeholder="Введите ваш телефон" required>
+                            </div>
+                            <div class="col-xs-12 form-submit">
+                                <button type="submit" class="section-btn">Позвоните мне</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal-thanks -->
+    <div class="modal-large modal fade" id="modal-thanks" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-thanks">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Заявка отправлена</h4>
+                    <p>Мы перезвоним в течение 5 минут</p>
+                </div>
+                <div class="modal-body modal-body-thanks">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="modal-body-title">Не теряйте нас из виду: постим пользу каждый день.</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-5 pull-xs-down">
+                            <a href="http://instagram.com/magellan.barbershop"><img src="img/iphone.png" alt="Инстаграм"></a>
+                            <span class="modal-body-img-label"><a href="http://instagram.com/magellan.barbershop">Инстаграм</a></span>
+                        </div>
+                        <div class="col-xs-12 col-sm-7">
+                            <a href="http://vk.com/magellan_barbershop"><img src="img/vk-group.png" alt="Группа ВК"></a>
+                            <span class="modal-body-img-label"><a href="http://vk.com/magellan_barbershop">Группа ВКонтакте</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal-polytic -->
+    <div class="modal-large modal fade" id="modal-polytic" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-content-polytics">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Политика конфиденциальности</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>1. Общие условия</h3>
+                    <p>1.1. Настоящая Политика определяет порядок обработки и защиты информации о физических лицах (далее – Пользователи), которая может быть получена magellanbarber.ru при использовании Пользователем услуг предоставляемых посредством сайта, сервисов, служб, программ (далее – Сайт, Сервисы).</p>
+                    <p>1.2. Целью настоящей Политики является обеспечение надлежащей защиты информации о Пользователях, в том числе их персональных данных, от несанкционированного доступа и разглашения.</p>
+                    <p>1.3. Отношения, связанные со сбором, хранением, распространением и защитой информации предоставляемой Пользователем, регулируются настоящей Политикой, иными официальными документами и действующим законодательством Российской Федерации.</p>
+                    <p>1.4. Регистрируясь на Сайте и используя Сайт и Сервисы Пользователь выражает свое полное согласие с условиями настоящей Политики.</p>
+                    <p>1.5. В случае несогласия Пользователя с условиями настоящей Политики использование Сайта и/или каких-либо Сервисов доступных при использовании Сайта должно быть немедленно прекращено.</p>
+                    <h3>2. Цели сбора, обработки и хранения информации предоставляемой пользователями Сайта</h3>
+                    <p>2.1. Обработка персональных данных Пользователя осуществляется в соответствии с законодательством Российской Федерации. Сайт magellanbarber.ru обрабатывает персональные данные Пользователя в целях:
+                        <br> - идентификации стороны в рамках соглашений;
+                        <br> - предоставления Пользователю услуг, в том числе, в целях получения Пользователем таргетированной рекламы;
+                        <br> - проверки, исследования и анализа таких данных, позволяющих поддерживать и улучшать сервисы и разделы Сайта, а также разрабатывать новые сервисы и разделы Сайта.
+                        <br> - проведение статистических и иных исследований на основе обезличенных данных </p>
+                    <p>2.2. Сайт magellanbarber.ru использует функцию ремаркетинга Google Analytics. Ремаркетинг в Google Analytics позволяет отменить показ Пользователю рекламных объявлений тех продуктов, услуг и сервисов, которые уже были получены Пользователем и более не представляют интереса для Пользователя. Для ремаркетинга используется сторонний файл cookie. Для изменения и отключения использования Google Analytics Пользователь может воспользоваться:
+                        <br> - менеджером рекламных предпочтений Google;
+                        <br> - блокировщиком Google Analytics.
+                        <br> Политика конфиденциальности Google опубликована по ссылке. </p>
+                    <h3>3. Условия обработки персональной информации предоставленной Пользователем и ее передачи третьим лицам
+</h3>
+                    <p>3.1. Администрация сайта magellanbarber.ru принимает все необходимые меры для защиты персональных данных Пользователя от неправомерного доступа, изменения, раскрытия или уничтожения.</p>
+                    <p>3.2. Администрация сайта magellanbarber.ru предоставляет доступ к персональным данным Пользователя только тем работникам, подрядчикам и аффилированным лицам которым эта информация необходима для обеспечения функционирования Сайта, Сервисов и оказания Услуг Пользователю.</p>
+                    <p>3.3. Администрация сайта magellanbarber.ru вправе использовать предоставленную Пользователем информацию, в том числе персональные данные, в целях обеспечения соблюдения требований действующего законодательства Российской Федерации (в том числе в целях предупреждения и/или пресечения незаконных и/или противоправных действий Пользователей). Раскрытие предоставленной Пользователем информации может быть произведено лишь в соответствии с действующим законодательством Российской Федерации по требованию суда, правоохранительных органов, а равно в иных предусмотренных законодательством Российской Федерации случаях.</p>
+                    <h3>4. Условия пользования Сайтом, Сервисами</h3>
+                    <p>4.1. Пользователь при пользовании Сайтом, подтверждает, что:
+                        <br> - обладает всеми необходимыми правами, позволяющими ему осуществлять регистрацию (создание учетной записи) и использовать Услуги сайта;
+                        <br> - указывает достоверную информацию о себе в объемах, необходимых для пользования Услугами Сайта, обязательные для заполнения поля для дальнейшего предоставления Услуг сайта помечены специальным образом, вся иная информация предоставляется пользователем по его собственному усмотрению.
+                        <br> - осознает, что информация на Сайте, размещаемая Пользователем о себе, может становиться доступной для третьих лиц не оговоренных в настоящей Политике и может быть скопирована и распространена ими;
+                        <br> - ознакомлен с настоящей Политикой, выражает свое согласие с ней и принимает на себя указанные в ней права и обязанности.
+                        <br>Ознакомление с условиями настоящей Политики и проставление галочки под ссылкой на данную Политику является письменным согласием Пользователя на сбор, хранение, обработку и передачу третьим лицам персональных данных предоставляемых Пользователем. </p>
+                    <p>4.2. Администрация сайта magellanbarber.ru не проверяет достоверность получаемой (собираемой) информации о Пользователях, за исключением случаев, когда такая проверка необходима в целях исполнения обязательств перед пользователем.</p>
+                    <h3>5. В рамках настоящей Политики под «персональной информацией Пользователя» понимаются:
+</h3>
+                    <p>5.1. Данные предоставленные Пользователем самостоятельно при пользовании Сайтом, Сервисами включая но, не ограничиваясь: имя, фамилия, пол, номер мобильного телефона и/или адрес электронной почты, домашний адрес.</p>
+                    <p>5.2. Данные, которые автоматически передаются Сервисам в процессе их использования с помощью установленного на устройстве Пользователя программного обеспечения, в том числе IP-адрес, информация из cookie, информация о браузере пользователя (или иной программе, с помощью которой осуществляется доступ к Сервисам), время доступа, адрес запрашиваемой страницы.</p>
+                    <p>5.3 Иная информация о Пользователе, сбор и/или предоставление которой определено в Регулирующих документах отдельных Сервисов сайта magellanbarber.ru.</p>
+                    <h3>6. Изменение и удаление персональных данных</h3>
+                    <p>6.1. Пользователь может в любой момент изменить (обновить, дополнить) предоставленную им персональную информацию или её часть, а также параметры её конфиденциальности, воспользовавшись функцией редактирования персональных данных в разделе, либо в персональном разделе соответствующего Сервиса.</p>
+                    <p>6.2. Пользователь также может удалить предоставленную им в рамках определенной учетной записи персональную информацию. При этом удаление аккаунта может повлечь невозможность использования некоторых Сервисов.</p>
+                    <h3>7. Изменение Политики конфиденциальности. Применимое законодательство</h3>
+                    <p>7.1. Администрация сайта magellanbarber.ru имеет право вносить изменения в настоящую Политику конфиденциальности. При внесении изменений в актуальной редакции указывается дата последнего обновления. Новая редакция Политики вступает в силу с момента ее размещения, если иное не предусмотрено новой редакцией Политики. Действующая редакция всегда находится на странице по адресу http://magellanbarber.ru/.</p>
+                    <p>7.2. К настоящей Политике и отношениям между Пользователем и сайтом magellanbarber.ru возникающим в связи с применением Политики конфиденциальности, подлежит применению право Российской Федерации.</p>
+                    <h3>8. Обратная связь. Вопросы и предложения</h3>
+                    <p>8.1. Все предложения или вопросы по поводу настоящей Политики следует сообщать в Службу поддержки magellanbarber.ru.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--[if lt IE 9]><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script><![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!--<![endif]-->
+    <script src="js/script.js"></script>
+    <script>
+    var sonlineWidgetOptions = {
+        placeid: 5795,
+        // windowedMode: true
+    }
+    </script>
+    <div id="widgetSonline" />
+    <script type="text/javascript" src="https://sonline.su/js/widget3/widget3.js"></script>
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-P23G9N" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+    (function(w, d, s, l, i, cid) {
+        w[l] = w[l] || [];
+        w.pclick_client_id = cid;
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-P23G9N', '50479');
+    </script>
+    <!-- End Google Tag Manager -->
+</body>
+
+</html>
